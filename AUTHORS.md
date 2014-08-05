@@ -1,7 +1,7 @@
-The TrailScribe Team:
+# TrailScribe Team
 
-* Ching-Lun Lin <ching.lun.lin@sv.cmu.edu>
-* David Lee <david.lee@sv.cmu.edu>
-* Emilia Torino <emilia.torino@sv.cmu.edu>
-* Isil Demir <isil.demir@sv.cmu.edu>
-* Mia Manalastas <mia.manalastas@sv.cmu.edu>
+* [Ching-Lun Lin](https://github.com/cllin) - <cllin@alumni.cmu.edu>
+* [David Lee](https://github.com/Chih-Shao) - <chihshao.lee@alumni.cmu.edu>
+* [Emilia Torino](https://github.com/metorino) - <maria.e.torino@alumni.cmu.edu>
+* [Isil Demir](https://github.com/isilien) - <isildemir@alumni.cmu.edu>
+* [Mia Manalastas](https://github.com/mia-m) - [mia\_elline@alumni.cmu.edu]('mia_elline@alumni.cmu.edu')

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Copyright (c) 2014, TrailScribe Team.
+# This content is released under the MIT License. See the file named LICENSE for details.
+
 if [ $# -ne 2 ]; then
     echo "Usage $0 tmp/<source_map.tif> map_name" # We expect source image and a name for the map
     exit 2
