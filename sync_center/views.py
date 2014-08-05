@@ -36,22 +36,35 @@ def sync_data(request):
     if request.method == 'POST':
         request_data = json.loads(request.body)
 
+        # Get the map information on the device
         request_maps = request_data['maps']
+
+	# Pass map information to util.py, which will return the IDs of maps need to be downloaded
         map_id_list = util.get_update_id_list('map', request_maps)
+
+	# Use to list of IDs to get complete information of maps
         maps = Map.objects.filter(id__in = map_id_list)
 
+        # Create the download URL
         for map in maps:
             map.filename = request.build_absolute_uri(settings.MEDIA_URL + 'map/' + map.filename)
 
 
-        request_kmls = request_data['kmls']      
+        # Get the KML information on the device
+        request_kmls = request_data['kmls']
+
+	# Pass map information to util.py, which will return the IDs of KMLs need to be downloaded
         kml_id_list = util.get_update_id_list('kml', request_kmls)
+
+	# Use to list of IDs to get complete information of KMLs
         kmls = KML.objects.filter(id__in = kml_id_list)
 
+        # Create the download URL
         for kml in kmls:
             kml.filename = request.build_absolute_uri(settings.MEDIA_URL + 'kml/' + kml.filename)
 
 
+        # Put all the model instances need to be updated in a list. Return the result as a JSON file.
         response = []
         for map in maps:
             response.append(map)
